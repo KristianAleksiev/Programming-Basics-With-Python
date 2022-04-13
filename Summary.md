@@ -1,4 +1,4 @@
-# Programming-basics-with-python
+# 🟢Programming-basics-with-python
 SoftUni programming basics with Python course
 
 1. First steps in coding with python
