@@ -1,0 +1,14 @@
+import math
+number_of_days = int(input())
+first_day = float(input())
+current_km = 0
+sum_km = first_day
+for i in range(1, number_of_days + 1):
+    procent = int(input())
+    first_day = first_day + first_day * procent / 100
+    sum_km +=first_day
+diff = abs(1000 - sum_km)
+if sum_km < 1000:
+    print(f"Sorry Mrs. Ivanova, you need to run {math.ceil(diff)} more kilometers")
+else:
+    print(f"You've done a great job running {math.ceil(diff)} more kilometers!")
