@@ -1,0 +1,13 @@
+budget = float(input())
+count_nights = int(input())
+price_per_night = float(input())
+percent_expenses = int(input())
+if count_nights > 7:
+    price_per_night = price_per_night * 0.95
+total_price = count_nights * price_per_night
+cost = total_price + budget*percent_expenses/100
+diff = abs(budget-cost)
+if budget >= cost:
+    print(f"Ivanovi will be left with {diff:.2f} leva after vacation.")
+else:
+    print(f"{diff:.2f} needed.")
