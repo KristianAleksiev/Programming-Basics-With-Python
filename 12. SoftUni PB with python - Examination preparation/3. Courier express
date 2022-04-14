@@ -1,0 +1,29 @@
+weight = float(input())
+type = input()
+distance = int(input())
+price_per_km = 0
+if type == "standard":
+    if weight < 1.0:
+        price_per_km = 0.03
+    elif weight < 10.0:
+        price_per_km = 0.05
+    elif weight < 40.0:
+        price_per_km = 0.1
+    elif weight < 90.0:
+        price_per_km = 0.15
+    elif weight <= 150.0:
+        price_per_km = 0.2
+elif type == "express":
+    if weight < 1:
+        price_per_km = 0.03 + (80 * 0.03 / 100)*weight
+    elif weight < 10:
+        price_per_km = 0.05 + (40 * 0.05 / 100)*weight
+    elif weight < 40:
+        price_per_km = 0.1 + (5 * 0.1 / 100)*weight
+
+    elif weight < 90:
+        price_per_km = 0.15 + (2*0.15/100)*weight
+    elif weight <= 150:
+        price_per_km = 0.2 + (1*0.2/100)*weight
+total_cost = distance * price_per_km
+print(f"The delivery of your shipment with weight of {weight:.3f} kg. would cost {total_cost:.2f} lv.")
